@@ -1,0 +1,119 @@
+// Gallery
+.grid-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem 0;
+
+	@include respond-to-width(600px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+}
+
+.postcard-box {
+	border-radius: $border-radius-primary;
+	overflow: hidden;
+	position: relative;
+
+	@include respond-to-width(1024px) {
+		&:hover .details {
+			border-radius: $border-radius-primary;
+			top: 0;
+			left: 0;
+			transform: rotate(0deg);
+		}
+
+		&:hover .postcard-title {
+			left: 0;
+			transition-delay: 200ms;
+		}
+
+		&:hover .description {
+			opacity: 1;
+			transition: all 800ms ease-in;
+		}
+	}
+}
+
+.postcard {
+	width: 100%;
+	height: auto;
+}
+
+.details {
+	color: $text-color;
+
+	@include respond-to-width(600px) {
+		border-radius: $border-radius-primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include flex-layout(column, nowrap);
+		@include flex-alignment(center, center);
+		width: 100%;
+		height: 100%;
+		background: $secondary-color-transparent;
+	}
+	@include respond-to-width(1024px) {
+		top: -100%;
+		left: -100%;
+		height: 100%;
+		transform: rotate(90deg);
+		transition: all 300ms linear;
+	}
+}
+
+.postcard-title {
+	border-radius: 0.25rem 0.25rem 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0.2rem 0;
+	background: $secondary-color-transparent;
+	font-size: 0.9rem;
+
+	@include respond-to-width(1024px) {
+		left: 100%;
+		transition: left 200ms linear;
+		font-size: 1.1rem;
+	}
+}
+
+.description {
+	display: none;
+
+	@include respond-to-width(600px) {
+		display: initial;
+		opacity: 1;
+		padding: 0 0.5rem;
+		font-size: 0.74rem;
+		line-height: 1.2;
+	}
+	@include respond-to-width(768px) {
+		font-size: 0.93rem;
+		line-height: 1.4;
+	}
+	@include respond-to-width(1024px) {
+		opacity: 0;
+		padding: 0 1rem;
+		font-size: 1.1rem;
+		line-height: 1.5;
+	}
+}
+
+.hide-on-desktop {
+	border-radius: 0 0 0.25rem 0.25rem;
+	position: absolute;
+	bottom: 0;
+	display: inline-flex;
+	justify-content: center;
+	width: 100%;
+	background: $secondary-color-transparent;
+	font-size: 0.9rem;
+
+	@include respond-to-width(1024px) {
+		display: none;
+	}
+}

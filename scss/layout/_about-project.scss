@@ -1,0 +1,30 @@
+#project {
+	flex: 1; // sticking the footer
+}
+
+.names {
+	margin-bottom: 1rem;
+	@include respond-to-width(1024px) {
+		text-align: center;
+	}
+}
+
+.project-photo {
+	text-align: center;
+}
+
+.image {
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-1;
+	width: 100%;
+	height: auto;
+	margin: 1.5rem 0;
+}
+
+.reference {
+	font-size: 0.8rem;
+	line-height: 1.9;
+	@include respond-to-width(1024px) {
+		font-size: 1rem;
+	}
+}

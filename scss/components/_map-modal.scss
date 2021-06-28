@@ -1,0 +1,27 @@
+// Modal content formatting that's injected via JS - basic styling is done in L.Control.Window.css
+.modal-text {
+	margin-top: 1rem;
+	font-size: 1rem;
+
+	@include respond-to-width(1024px) {
+		margin-top: 0;
+		font-size: 1.1rem;
+	}
+}
+
+.modal-years {
+	margin-top: 3rem;
+	font-style: italic;
+}
+
+.modal-img {
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-1;
+	display: block;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.modal-img:last-child {
+	margin-bottom: 1rem;
+}

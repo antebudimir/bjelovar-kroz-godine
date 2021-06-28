@@ -1,0 +1,105 @@
+// Menu
+#hamburger {
+	@include respond-to-width(1024px) {
+		display: none;
+	}
+}
+
+.fa-bars,
+.fa-times {
+	color: $primary-color;
+}
+
+.fa-bars {
+	font-size: 1.7rem;
+
+	@include respond-to-width(600px) {
+		font-size: 2rem;
+	}
+}
+
+.fa-times {
+	font-size: 2.1rem;
+
+	@include respond-to-width(600px) {
+		font-size: 2.4rem;
+	}
+}
+
+#menu-overlay {
+	z-index: 1001;
+	border-radius: 0 0 0.25rem 0.25rem;
+	position: fixed;
+	top: 5.5rem;
+	right: -100%;
+	width: calc(100vw - 2rem);
+	height: calc(100vh - 1rem);
+	background: $overlay-color;
+	transition: right 500ms;
+	text-align: center;
+
+	@include respond-to-width(600px) {
+		top: 6.5rem;
+		height: calc(100vh - 6rem);
+	}
+}
+
+#map-home #menu-overlay {
+	height: calc(100vh - 6.51rem);
+
+	@include respond-to-width(600px) {
+		height: calc(100vh - 7.5rem);
+	}
+}
+
+#nav {
+	@include flex-center;
+	min-height: 100%;
+
+	@include respond-to-width(1024px) {
+		min-height: initial;
+	}
+}
+
+.menu {
+	@include respond-to-width(1024px) {
+		@include flex-alignment(flex-end, center);
+	}
+}
+
+.menu-item {
+	border-radius: $border-radius-primary;
+	margin-bottom: 0.6rem; // Leaving it for desktop too so that the menu items align better visually with the logo
+	background: $secondary-color;
+
+	@include respond-to-width(1024px) {
+		background: initial;
+		border-radius: initial;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+}
+
+.item-link {
+	display: block;
+	width: 100%;
+	padding: 0.8rem 1rem;
+	font-weight: bolder;
+	text-transform: uppercase;
+
+	@include respond-to-width(600px) {
+		font-size: 1.3rem;
+	}
+
+	@include respond-to-width(1024px) {
+		padding: 0;
+		font-size: 1rem;
+
+		&:focus {
+			text-decoration: underline;
+			transform: scale(1.1);
+		}
+	}
+}

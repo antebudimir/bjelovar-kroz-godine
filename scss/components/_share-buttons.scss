@@ -1,0 +1,48 @@
+#share-buttons {
+	z-index: 1;
+	position: fixed;
+	left: 0.8rem;
+	bottom: 5rem;
+
+	& .hidden-visually {
+		@include hidden-visually;
+	}
+
+	@include respond-to-width(1024px) {
+		left: initial;
+		right: 0.8rem;
+		bottom: 1rem;
+	}
+}
+
+.bg-facebook,
+.bg-whatsapp {
+	@include round-button;
+}
+
+.bg-facebook {
+	margin-bottom: 1.25rem;
+	background: $facebook-bg;
+}
+
+.fa-facebook {
+	padding-top: 0.6rem;
+	font-size: 1.5rem;
+}
+
+.bg-whatsapp {
+	background: $whatsapp-bg;
+}
+
+.fa-whatsapp {
+	padding-top: 0.43rem;
+	padding-left: 0.05rem;
+	font-size: 1.7rem;
+}
+
+.bg-facebook:hover,
+.bg-facebook:focus,
+.bg-whatsapp:hover,
+.bg-whatsapp:focus {
+	@include pop-out-2;
+}

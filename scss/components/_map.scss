@@ -1,0 +1,9 @@
+// Map
+#bjelovar {
+	flex: 1; // sticking the map to the bottom
+
+	border-bottom: 0.1rem solid $primary-color;
+	border-top: 0.1rem solid $primary-color;
+	width: 100%;
+	margin-top: 1rem;
+}

@@ -1,0 +1,54 @@
+#europeana {
+	flex: 1; // sticking the footer to the bottom
+}
+
+.search-group {
+	@include flex-layout(column, nowrap);
+	@include flex-center;
+	gap: 1rem 0;
+}
+
+#output {
+	@include flex-layout(column, nowrap);
+
+	& p {
+		overflow-wrap: break-word;
+	}
+}
+
+.result-group {
+	@include flex-layout(column, nowrap);
+}
+
+.results {
+	text-align: center;
+}
+
+.image.europeana {
+	margin: 0 auto;
+	@include respond-to-width(1024px) {
+		width: 50%;
+	}
+}
+
+.enlarge-image {
+	align-self: center;
+	margin-top: 0.3rem;
+}
+
+#file-types,
+#search-parameters {
+	margin-left: 1rem;
+}
+
+.list-item {
+	list-style: decimal inside none;
+
+	&:last-child {
+		margin-bottom: 1rem;
+	}
+
+	@include respond-to-width(600px) {
+		font-size: 1.2rem;
+	}
+}

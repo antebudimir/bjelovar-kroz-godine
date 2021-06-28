@@ -1,0 +1,23 @@
+// Header
+#header {
+	@include flex-alignment(space-between, center);
+}
+
+.logo-img {
+	width: auto;
+	height: 2.8rem;
+
+	&:hover,
+	&:focus {
+		border-radius: $border-radius-primary;
+		box-shadow: $box-shadow-2;
+	}
+
+	@include respond-to-width(600px) {
+		height: 4rem;
+	}
+
+	@include respond-to-width(1024px) {
+		height: 4.5rem;
+	}
+}

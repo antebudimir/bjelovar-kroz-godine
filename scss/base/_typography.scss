@@ -1,0 +1,64 @@
+// @font-faces:
+@font-face {
+	font-family: 'Texturina';
+	src: url('../fonts/Texturina-Regular.woff');
+}
+
+// All fonts declared:
+html {
+	font-family: 'Texturina', serif;
+}
+
+input,
+select,
+textarea,
+button {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+h2 {
+	@include respond-to-width(600px) {
+		font-size: 1.7rem;
+	}
+}
+
+.small-screen {
+	@include respond-to-width(635px) {
+		display: none;
+	}
+}
+
+.large-screen {
+	display: none;
+	@include respond-to-width(650px) {
+		display: initial;
+	}
+}
+
+h2,
+h3 {
+	margin: 1rem 0;
+	text-align: center;
+}
+
+// Exhibit heading h3
+.europeana-heading {
+	margin: 2rem 0 1rem;
+	font-size: 1.4rem;
+}
+
+p {
+	margin-bottom: 1rem;
+	line-height: 1.6;
+
+	@include respond-to-width(600px) {
+		font-size: 1.2rem;
+	}
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+}

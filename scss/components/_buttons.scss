@@ -1,0 +1,48 @@
+// Buttons
+.btn {
+	align-self: center;
+	border: 0.1rem solid $primary-color;
+	border-radius: $border-radius-primary;
+	box-shadow: $box-shadow-4;
+	padding: 0.2rem 1rem 0.4rem;
+	background: $secondary-color;
+	color: $primary-color;
+	font-size: 1.2rem;
+	font-weight: 700;
+
+	&:hover,
+	&:focus {
+		box-shadow: $box-shadow-3;
+		background: $button-hover-color;
+	}
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
+}
+
+.filters,
+#load-more,
+#moreBtn {
+	display: none;
+}
+
+.filters {
+	margin: 1rem 0;
+}
+
+.filter-btn {
+	margin: 1rem 0 0;
+
+	&.active {
+		box-shadow: $box-shadow-3;
+		background: $button-hover-color;
+	}
+}
+
+#load-more {
+	text-align: center;
+	@include respond-to-width(1024px) {
+		margin-top: 1.2rem;
+	}
+}

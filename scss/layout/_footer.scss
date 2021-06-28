@@ -1,0 +1,20 @@
+// Footer
+#footer {
+	padding: 1rem 0 0;
+	color: $primary-color;
+	font-size: 0.8rem;
+	text-align: center;
+
+	@include respond-to-width(600px) {
+		padding: 1rem 0 0;
+		font-size: 1rem;
+	}
+
+	@include respond-to-width(1024px) {
+		padding: 2rem 0 0;
+	}
+
+	& p {
+		font-size: inherit;
+	}
+}

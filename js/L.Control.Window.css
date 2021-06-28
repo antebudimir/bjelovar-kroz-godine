@@ -1,0 +1,149 @@
+.leaflet-control-window-wrapper {
+	display: none;
+	opacity: 0;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	animation: fade-in 700ms;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.nonmodal {
+	z-index: 11000;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 15000;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.visible {
+	display: block;
+	opacity: 1;
+}
+
+.leaflet-control-window {
+	position: absolute;
+	z-index: 10000;
+	border-radius: 4px;
+
+	/* BOX SHADOW */
+	-webkit-box-shadow: rgb(255, 255, 255) 0px 0px 10px,
+		rgb(255, 255, 255) 0px 0px 6px, rgb(255, 255, 255) 0px 4px 4px;
+	-moz-box-shadow: rgb(255, 255, 255) 0px 0px 10px,
+		rgb(255, 255, 255) 0px 0px 6px, rgb(255, 255, 255) 0px 4px 4px;
+	box-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 6px,
+		rgb(255, 255, 255) 0px 4px 4px;
+}
+
+.control-window {
+	background: rgb(255, 243, 227);
+	font-size: 0.9rem;
+	margin: 0 1.8rem 0 0.4rem;
+}
+
+@media screen and (min-width: 1165px) {
+	.control-window {
+		margin-top: 1.15rem;
+	}
+}
+
+.leaflet-control-window .titlebar {
+	min-height: 38px;
+	cursor: grab;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+}
+
+.leaflet-control-window .close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 35px;
+	height: 35px;
+	border-radius: 4px;
+	font: 16px/35px Tahoma, Verdana, sans-serif;
+	cursor: pointer;
+	z-index: 30;
+	background: rgb(209, 70, 70);
+	transition-property: background;
+	transition-duration: 200ms;
+	transition-timing-function: linear;
+	color: rgb(239, 232, 215);
+	font-size: 22pt;
+	text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+	.leaflet-control-window .close {
+		line-height: 1.12;
+	}
+}
+
+.leaflet-control-window .close:hover {
+	background-color: rgb(239, 232, 215);
+	color: rgb(209, 70, 70);
+	border: 1px solid rgb(209, 70, 70);
+}
+
+.leaflet-control-window .content {
+	padding: 0 1rem;
+	margin-top: 10px;
+	z-index: 29;
+	overflow: auto;
+}
+
+.leaflet-control-window .promptButtons {
+	text-align: right;
+	padding: 0;
+}
+
+.leaflet-control-window button {
+	position: relative;
+	display: inline-block;
+	background-color: transparent;
+	color: inherit;
+
+	opacity: 0.5;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+
+	cursor: pointer;
+	font-size: medium;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	border: 0;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 12px 8px 0 8px;
+}
+
+.leaflet-control-window button:focus {
+	outline: 0;
+}
+
+.leaflet-control-window button:hover {
+	opacity: 1;
+}
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}

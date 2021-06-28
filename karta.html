@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Virtualna šetnja kroz grad Bjelovar. Pogledajte kako je grad nekada izgledao kroz stare razglednice iz 19. i 20.stoljeća.">
+    <meta name="keywords" content="Bjelovar, grad, prošlost, razglednice, povijest, šetnja, 19. stoljeće, 20. stoljeće.">
+    <meta name="theme-color" content="#efe8d7">
+    <meta name="author" content="Ante Budimir">
+    <!-- Img preview for sharing -->
+    <meta property="og:image" content="./img/naslovna.jpg">
+    <meta property="og:title" content="Bjelovar kroz godine"/>
+    <meta property="og:description" content="Virtualna šetnja gradom kroz stare razglednice iz 20. stoljeća"/>
+
+    <title>Bjelovar kroz godine | Karta</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Stylesheet -->
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Leaflet styles -->
+    <link rel="preload" href="./css/leaflet.css" as="style">
+    <link rel="stylesheet" href="./css/leaflet.css">
+
+    <!-- Leaflet JS -->
+    <script src="./js/leaflet-src.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
+    <script src="https://kit.fontawesome.com/61d247919a.js" crossorigin="anonymous"></script>
+    
+    <!-- Browser tab icon -->
+    <link rel="shortcut icon" href="img//icons/favicon.ico" type="image/x-icon"/>
+
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon-iphone-60x60.png">
+    <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon-ipad-76x76.png">
+    <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon-iphone-retina-120x120.png">
+    <link rel="apple-touch-icon" href="./img/icons/apple-touch-icon-ipad-retina-152x152.png">
+</head>
+
+<body id="map-home">
+    <div id="page-wrapper">
+        <!-- HEADER -->
+        <header id="header">
+            <div class="logo"><a href="karta.html"><img class="logo-img" src="./img/logo.png" alt="Grb Bjelovara" title="Povratak na kartu" tabindex="0"></a></div>
+
+            <h1 class="hidden-visually">Karta Bjelovara s razglednicama</h1>
+            
+            <div id="hamburger">
+                <i id="menu-icon" class="fa fa-bars"></i>
+            </div>
+
+            <!-- Menu overlay -->
+            <div id="menu-overlay">
+                <nav id="nav">
+                    <ul class="menu">
+                        <li class="menu-item underline"><a class="item-link" href="#bjelovar" title="Spustite se na kartu i prošećite gradom">Prošećite</a></li>
+                        <li class="menu-item underline"><a class="item-link" href="o-projektu.html" title="Kako je došlo do projekta i koji mu je cilj">O projektu</a></li>
+                        <li class="menu-item underline"><a class="item-link" href="galerija.html" title="Sve razglednice na jednom mjestu za brzo pregledavanje">Galerija</a></li>
+                        <li class="menu-item underline"><a class="item-link" href="europeana.html" title="Pretražite građu europskih muzeja">Europeana</a></li>
+        <!--                 <li class="menu-item underline"><a class="item-link" href="#" title="Zanimljive crtice iz povijesti našega grada">Jeste li znali?</a></li> -->
+                        <li class="menu-item underline"><a class="item-link" href="kontakt.html" title="Imate prijedloga, pohvala, informacija?">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAP -->
+            <main id="bjelovar"><!-- Map --></main>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <span>&copy; <a class="underline" href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>, &copy; <a class="underline" href="https://www.openstreetmap.org/" title="Free editable maps of the world">OpenStreetMap</a>, &copy; <a class="underline" href="https://www.mapbox.com/" title="Maps, geocoding, and navigation APIs & SDKs">Mapbox</a></span>
+            <div><a class="underline" href="https://knjiznica-bjelovar.hr" title="Narodna knjižnica 'Petar Preradović' Bjelovar">&copy;Narodna knjižnica “Petar Preradović” Bjelovar</a>, 2020. - <span id="currentYear"></span>.</div>
+        </footer>
+    </div>
+
+    <!-- JS -->   
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <script src="./js/map-init.js"></script>
+    <script defer src="./js/main.js"></script>
+    
+    <!-- Modal window -->
+    <script defer src="./js/L.Control.Window.js"></script>
+    <link rel="stylesheet" href="./js/L.Control.Window.css">
+
+</body>
+</html>

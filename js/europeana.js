@@ -49,7 +49,7 @@ searchForm.addEventListener('submit', (e) => {
 		.catch((error) => {
 			console.log('An error occured:', error),
 				(errorOutput.innerText =
-					'Traženi pojam nije pronađen. Provjerite jeste li ga točno upisali ili upišite neki drugi pojam, a provjerite i jeste li spojeni na mrežu.');
+					'Pretraga nije uspjela. Provjerite jeste li spojeni na mrežu.');
 		});
 });
 
@@ -155,6 +155,7 @@ const updateUI = (data) => {
 				item.dcSubjectLangAware.sl ||
 				item.dcSubjectLangAware.hu ||
 				item.dcSubjectLangAware.et ||
+				item.dcSubjectLangAware.fi ||
 				item.dcSubjectLangAware.lv;
 		} else {
 			dcSubjectLangAware = 'Nije raspoloživ.';
@@ -185,6 +186,7 @@ const updateUI = (data) => {
 				item.dcDescriptionLangAware.sl ||
 				item.dcDescriptionLangAware.hu ||
 				item.dcDescriptionLangAware.et ||
+				item.dcDescriptionLangAware.fi ||
 				item.dcDescriptionLangAware.lv;
 		} else {
 			dcDescriptionLangAware = 'Nije raspoloživ.';
@@ -215,6 +217,7 @@ const updateUI = (data) => {
 				item.edmConceptPrefLabelLangAware.sl ||
 				item.edmConceptPrefLabelLangAware.hu ||
 				item.edmConceptPrefLabelLangAware.et ||
+				item.edmConceptPrefLabelLangAware.fi ||
 				item.edmConceptPrefLabelLangAware.lv;
 		} else {
 			edmConceptPrefLabelLangAware = 'Nije raspoloživ.';
@@ -244,6 +247,7 @@ const updateUI = (data) => {
 				item.edmPlaceLabelLangAware.sl ||
 				item.edmPlaceLabelLangAware.hu ||
 				item.edmPlaceLabelLangAware.et ||
+				item.edmPlaceLabelLangAware.fi ||
 				item.edmPlaceLabelLangAware.es;
 		} else {
 			edmPlaceLabelLangAware = 'Nije raspoloživo.';
@@ -273,6 +277,7 @@ const updateUI = (data) => {
 				item.edmTimespanLabelLangAware.sl ||
 				item.edmTimespanLabelLangAware.hu ||
 				item.edmTimespanLabelLangAware.et ||
+				item.edmTimespanLabelLangAware.fi ||
 				item.edmTimespanLabelLangAware.lv;
 		} else {
 			edmTimespanLabelLangAware = 'Nije raspoloživ.';

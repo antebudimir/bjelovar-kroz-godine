@@ -16,6 +16,10 @@
 	}
 }
 
+.error {
+	text-align: center;
+}
+
 .result-group {
 	@include flex-layout(column, nowrap);
 }

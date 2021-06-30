@@ -4,7 +4,7 @@
 
 .names {
 	margin-bottom: 1rem;
-	@include respond-to-width(1024px) {
+	@include respond-to-width(517px) {
 		text-align: center;
 	}
 }

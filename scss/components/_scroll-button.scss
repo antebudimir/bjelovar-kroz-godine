@@ -1,15 +1,15 @@
 .scrollButton {
+	display: none;
 	z-index: 500;
 	outline: none;
 	border-radius: $border-radius-primary;
 	border: $primary-color 0.125rem solid;
 	box-shadow: $box-shadow-1;
 	position: fixed;
-	bottom: 2rem;
+	bottom: 1rem;
 	left: 1rem;
-	display: none;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: $button-size;
+	height: $button-size;
 	background: $secondary-color;
 	color: $primary-color;
 

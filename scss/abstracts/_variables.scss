@@ -1,5 +1,6 @@
 // Colors
 $primary-color: rgb(209, 70, 70);
+$primary-color-brighter: rgb(255, 30, 30);
 $secondary-color: rgb(239, 232, 215);
 $secondary-color-transparent: rgba(239, 232, 215, 0.8);
 $text-color: rgb(48, 47, 47);
@@ -24,3 +25,6 @@ $box-shadow-4: rgba(17, 17, 26, 0.3) 0px 0px 0px,
 	rgba(17, 17, 26, 0.3) 0px 0px 0px, rgba(17, 17, 26, 0.3) 0px 5px 10px;
 $box-shadow-5: rgba(0, 0, 0, 0.35) 0px 0px 10px 5px,
 	rgba(0, 0, 0, 0.35) 1px 1px 20px 10px;
+
+// Button size
+$button-size: 3rem;

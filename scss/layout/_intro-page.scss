@@ -2,6 +2,10 @@
 	margin: 0 auto;
 }
 
+#intro-home p {
+	margin: 0;
+}
+
 #showcase {
 	border-radius: $border-radius-primary;
 	box-shadow: $box-shadow-1;
@@ -37,6 +41,7 @@
 
 .wrap-them {
 	@include flex-alignment(initial, center);
+	margin-bottom: 1rem;
 }
 
 .fa-city,

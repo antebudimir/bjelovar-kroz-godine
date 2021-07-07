@@ -1,12 +1,11 @@
 // Hamburger
 if (window.innerWidth < 1024) {
-	const hamburger = document.querySelector('#hamburger');
+	const hamburger = document.querySelector('#hamburger'),
+		menuOverlay = document.querySelector('#menu-overlay'),
+		icon = document.querySelector('#menu-icon'),
+		body = document.querySelector('body');
 
 	hamburger.addEventListener('click', () => {
-		const menuOverlay = document.querySelector('#menu-overlay'),
-			icon = document.querySelector('#menu-icon'),
-			body = document.querySelector('body');
-
 		if (menuOverlay.style.right === '' || menuOverlay.style.right === '-100%') {
 			menuOverlay.style.right = '1rem';
 			body.style.overflow = 'hidden';
@@ -19,13 +18,13 @@ if (window.innerWidth < 1024) {
 			icon.classList.remove('fa-times');
 			icon.classList.add('fa-bars');
 		}
+	});
 
-		menuOverlay.addEventListener('click', () => {
-			menuOverlay.style.right = '-100%';
-			body.style.overflow = 'unset';
-			icon.classList.remove('fa-times');
-			icon.classList.add('fa-bars');
-		});
+	menuOverlay.addEventListener('click', () => {
+		menuOverlay.style.right = '-100%';
+		body.style.overflow = 'unset';
+		icon.classList.remove('fa-times');
+		icon.classList.add('fa-bars');
 	});
 }
 

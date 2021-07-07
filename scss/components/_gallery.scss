@@ -14,21 +14,26 @@
 	border-radius: $border-radius-primary;
 	overflow: hidden;
 	position: relative;
+}
 
+.lightbox {
 	@include respond-to-width(1024px) {
-		&:hover .details {
+		&:hover .details,
+		&:focus .details {
 			border-radius: $border-radius-primary;
 			top: 0;
 			left: 0;
 			transform: rotate(0deg);
 		}
 
-		&:hover .postcard-title {
+		&:hover .postcard-title,
+		&:focus .postcard-title {
 			left: 0;
 			transition-delay: 200ms;
 		}
 
-		&:hover .description {
+		&:hover .description,
+		&:focus .description {
 			opacity: 1;
 			transition: all 800ms ease-in;
 		}

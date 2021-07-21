@@ -104,3 +104,18 @@ if (
 		}
 	});
 }
+
+// Textarea auto resize
+const contactHome = document.querySelector('#contact-home');
+
+if (document.body === contactHome) {
+	(function autoResize() {
+		const textArea = document.querySelector('[data-autoresize]'),
+			offset = textArea.offsetHeight - textArea.clientHeight;
+
+		textArea.addEventListener('input', (e) => {
+			e.target.style.height = 'auto';
+			e.target.style.height = e.target.scrollHeight + offset + 'px';
+		});
+	})();
+}

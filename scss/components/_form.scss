@@ -57,7 +57,3 @@ input:focus-within,
 textarea:focus-within {
 	box-shadow: 0 0 0 100vmax $overlay-color-2;
 }
-
-textarea::placeholder {
-	line-height: 2.9;
-}

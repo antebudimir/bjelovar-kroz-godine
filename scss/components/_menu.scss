@@ -81,14 +81,14 @@
 
 .menu-link {
 	display: block;
-	// width: 8.5rem;
-	// width: 100%;
-	// padding: 0.8rem 1rem;
+	width: 8.5rem;
+	padding: 0.8rem 1rem;
 	font-weight: bolder;
 	text-transform: uppercase;
 	text-align: center;
 
 	@include respond-to-width(600px) {
+		width: 11rem;
 		font-size: 1.3rem;
 	}
 

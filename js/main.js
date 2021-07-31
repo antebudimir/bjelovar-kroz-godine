@@ -1,31 +1,43 @@
 // Hamburger
 if (window.innerWidth < 1024) {
 	const hamburger = document.querySelector('#hamburger'),
-		menuOverlay = document.querySelector('#menu-overlay'),
+		menu = document.querySelector('.menu'),
 		icon = document.querySelector('#menu-icon'),
 		body = document.querySelector('body');
 
 	hamburger.addEventListener('click', () => {
-		if (menuOverlay.style.right === '' || menuOverlay.style.right === '-100%') {
-			menuOverlay.style.right = '1rem';
+		if (menu.style.display === 'none' || menu.style.display === '') {
+			setTimeout(() => {
+				menu.style.display = 'flex';
+				menu.style.flexFlow = 'column nowrap';
+				menu.style.justifyContent = 'center';
+				menu.style.alignItems = 'center';
+				menu.style.animation = 'slideIn 300ms ease-in';
+			}, 1);
+
 			body.style.overflow = 'hidden';
 			icon.classList.remove('fa-bars');
 			icon.classList.add('fa-times');
-			icon.style.transition = 'all 300ms ease-in';
+			icon.style.transition = 'color 300ms ease-in';
 		} else {
-			menuOverlay.style.right = '-100%';
-			body.style.overflow = 'unset';
-			icon.classList.remove('fa-times');
-			icon.classList.add('fa-bars');
+			slideOut();
 		}
 	});
 
-	menuOverlay.addEventListener('click', () => {
-		menuOverlay.style.right = '-100%';
+	menu.addEventListener('click', () => {
+		slideOut();
+	});
+
+	function slideOut() {
+		menu.style.animation = 'slideOut 300ms ease-in';
+		setTimeout(() => {
+			menu.style.display = 'none';
+		}, 300);
+
 		body.style.overflow = 'unset';
 		icon.classList.remove('fa-times');
 		icon.classList.add('fa-bars');
-	});
+	}
 }
 
 // Move logo markup to Desktop wrapper

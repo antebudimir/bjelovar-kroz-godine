@@ -290,9 +290,9 @@ const updateUI = (data) => {
 			output.innerHTML += `
 			<div class="result-group" tabindex="0" data-filter="${type}">
 				<h3 class="europeana-heading">${index}. ${title}</h3>
-				<a href="${edmIsShownBy}" target="blank" rel="noopener" title="${title}"><img class="image europeana" src="${thumbnail}" alt="${title}"></a>
+				<a href="${edmIsShownBy}" target="_blank" rel="noopener" title="${title}"><img class="image europeana" src="${thumbnail}" alt="${title}"></a>
 				<span class="enlarge-image">Klikni na fotografiju i uvećaj</span>
-				<br>
+
 				<p>Predmet: ${dcSubjectLangAware}</p>
 
 				<p>Godina: ${year}</p>

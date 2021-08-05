@@ -30,13 +30,6 @@
 		margin: 0 auto;
 		text-align: center;
 	}
-
-	& .btn {
-		margin-top: 0;
-		@include respond-to-width(1024px) {
-			margin-top: 1rem;
-		}
-	}
 }
 
 .wrap-them {

@@ -49,8 +49,10 @@ if (window.innerWidth > 1023) {
 }
 
 // Date
-const currentYear = document.querySelector('#currentYear');
-currentYear.innerText = new Date().getFullYear();
+(function getCurrentYear() {
+	const currentYear = document.querySelector('#currentYear');
+	currentYear.innerText = new Date().getFullYear();
+})();
 
 // Initialize tobii lightbox
 const galleryHome = document.querySelector('#gallery-home');

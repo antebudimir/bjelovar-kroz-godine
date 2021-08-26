@@ -43,11 +43,9 @@ if (window.innerWidth < 1024) {
 // Move logo markup to Desktop wrapper
 if (window.innerWidth > 1023) {
 	const header = document.querySelector('header'),
-		nav = document.querySelector('#nav'),
-		overlay = document.querySelector('#menu-overlay');
+		nav = document.querySelector('#nav');
 
 	header.append(nav);
-	overlay.remove();
 }
 
 // Date
